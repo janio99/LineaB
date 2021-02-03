@@ -34,7 +34,15 @@
         L.control.scale().addTo(map);
 
         //Añadir un marcador
+
+        var myIcon = L.icon({
+            iconUrl: 'https://www.uniamazonia.edu.co/v10/images/logos/logosimbolo_transparente.gif',
+            iconSize: [20, 20],
+            popupAnchor: [-1, -10]
+        });
+
         var uniamazonia = L.marker([1.6201189752737581, -75.60426360785135], {
+            icon: myIcon,
             draggable: true,
             title: 'Ubicación'
         }).addTo(map)
